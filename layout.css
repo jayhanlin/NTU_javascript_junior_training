@@ -17,14 +17,38 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .item {
   width: 220px;
   margin: 10px;
-  text-align:center;
+  text-align: center;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.main {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  background-color: bisque;
+  width: 280px;
+  margin: 10px;
 }
 
-.icon {
-    width: 20px;
-    height: 20px;
+/* CSS Media Query */
+/* RWD核心設計工具 */
+@media (max-width:1250px){
+    /* 如果螢幕寬度小於1250px，套用這個區塊的設定 */
+    .box{
+        width: 45%;
+    }
+
+}
+@media (max-width:500px){
+    .box{
+        width: 90%;
+    }
 }
