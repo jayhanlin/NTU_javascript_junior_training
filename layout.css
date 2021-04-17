@@ -48,6 +48,10 @@ body {
 
 }
 @media (max-width:500px){
+    /* 如果螢幕寬度小於500px，套用這個區塊的設定 */
+    .head{
+        font-size: large;
+    }
     .box{
         width: 90%;
     }
