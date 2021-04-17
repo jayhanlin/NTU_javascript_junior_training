@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
+    <!-- html註解 -->
     <style>
+        /* CSS註解 */
+        /* CSS選擇器 (Selector) */
+        /* Class選擇器 */
         .title {
             margin-bottom: 10px;
             font-size: 24px;
@@ -25,12 +29,22 @@
         .keyword {
             color: red;
         }
+
+        /* id選擇器 */
+        #p1 {
+            text-decoration: underline;
+        }
+
+        /* 標籤名稱選擇器 */
+        body {
+            background-color: #a1a1a1d2;
+        }
     </style>
 </head>
 
-<body style="background-color: #ffffff;">
+<body>
     <!-- <h3 style="color: red; text-decoration: underline;">這是第一段的標題</h3> -->
-    <div class="title">這是第一段的標題</div>
+    <div class="title" id="p1">這是第一段的標題</div>
     <!--區塊型標籤(會自動換行)-->
     <div class="content">今天<span class="keyword">天氣</span>真好
         <!--<div style="background-color: grey;">更多內容</div>-->
