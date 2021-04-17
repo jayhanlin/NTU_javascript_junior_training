@@ -1,13 +1,30 @@
-body{
-    margin: 0px;  
+body {
+  margin: 0px;
+  background-color: #dddddd;
 }
-.head{
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    font-size:x-large;
-    letter-spacing: 1px;
-    padding-top: 2%;
-    padding-bottom: 2%;
+.head {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: x-large;
+  letter-spacing: 1px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 220px;
+  margin: 10px;
+  text-align:center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
 }
