@@ -1,0 +1,13 @@
+body{
+    margin: 0px;  
+}
+.head{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size:x-large;
+    letter-spacing: 1px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
