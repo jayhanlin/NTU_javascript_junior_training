@@ -13,30 +13,96 @@
         // 單行註解
         /* 多行
             註解*/
-        console.log('Hello Javascript');
+        // console.log('Hello Javascript');
 
-        let x;
-        console.log(x);
-        x = 10;
-        console.log(x);
-        x = true;
-        console.log(x);
-        x = 3 * 5;
-        console.log(x);
-        x += 2;
-        x -= 1;
-        console.log(x);
-        x = 3 == 4;
-        console.log(x); //false
-        x = prompt("請輸入文字");
-        console.log(x);
+        // let x;
+        // console.log(x);
+        // x = 10;
+        // console.log(x);
+        // x = true;
+        // console.log(x);
+        // x = 3 * 5;
+        // console.log(x);
+        // x += 2;
+        // x -= 1;
+        // console.log(x);
+        // x = 3 == 4;
+        // console.log(x); //false
+        // x = prompt("請輸入文字");
+        // console.log(x);
 
-        x = true
-        if (x) {
-            console.log('Hello');
+        // x = true
+        // if (x) {
+        //     console.log('Hello');
+        // }
+        // let money = parseInt(prompt('請問要領多少錢'));
+        // if (money <= 100000) {
+        //     if (money < 100) {
+        //         console.log('太少');
+        //     } else {
+        //         console.log('ok');
+        //     }
+        // } else {
+        //     console.log('太多');
+        // }
+
+        // if (money < 100) {
+        //     console.log('太少');
+        // } else if (money < 100000) {
+        //     console.log('ok');
+        // } else {
+        //     console.log('太多');
+
+        // }
+        // let i = 0;
+        // while (i <= 1000000000) {
+        //     i++;
+        // }
+        //     console.log('while loop=' + i);
+
+
+        // let i = 1;
+        // let x = 0;
+        // while (i <= 50) {
+        //     x = x+i;
+        // }
+        //     console.log(x);
+        // let g = parseInt(prompt('請輸入開根號'))
+        // // if (g>30) {
+        // //     console.log('沒有整數解');
+        // // }else{
+        // //     console.log(Math.sqrt(g));
+        // // }
+        // let i = 1;
+        // let c = true;
+        // while (i < g) {
+        //     if (i * i == g) {
+        //         console.log(i);
+        //     c = false;
+
+        //         break;
+        //     }
+        //     i++;
+        // }
+        // if (c) {
+        //     console.log('沒有整數解');
+        // }
+        // for (let n = 0; n < g; n++) {
+        //     if (n*n==g) {
+        //         console.log(n);
+        //         break;
+        //     }
+        // }
+        function calculate(int) {
+            let sum = 0;
+            for (let index = 1; index <= int; index++) {
+                sum = sum + index;
+                // console.log(sum);
+            }
+            return sum;
         }
-        
-
+        const q = calculate(100);
+        console.log(q);
     </script>
 </body>
 
