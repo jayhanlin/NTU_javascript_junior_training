@@ -6,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htmldom</title>
+    <style>
+        .text {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <h3>Hello HTML DOM</h3>
+    <div id="content">今天天氣不錯</div>
+    <img src="img/dog1.jpg" id="img" style="height: 200px; width: 200px;opacity:1;transition: width 2s,opacity 2s;" onclick="enlarge()"> <!--transition 監聽屬性變化-->
+    <button onclick="change()">點我</button>
+    <button onclick="show()">顯示</button>
+    <button onclick="changeImg()">換圖</button>
+    <!-- 作業內容：新增一個標籤選單，並切換相對應內容 -->
     <script>
         /*
         // 層次很多的物件
@@ -38,6 +51,52 @@
         }
         */
 
+        /*
+        //修改背景顏色
+        window.document.body.bgColor = "Gray";
+        //印出 Body 標籤內的文字
+        console.log(window.document.body.innerText);
+        // 修改body標籤內的文字
+        window.document.body.innerText = "!! Hello word !!";
+        console.log(window.document.body.innerText);
+        */
+
+        /*
+        function change() {
+            window.document.body.bgColor = "Gray";
+            window.document.body.innerText = "!! Hello word !!";
+        }
+        */
+        function change() {
+            // 1. 把想要處理的標籤物件取出來 (HTML Element) 取出來
+            //  window.document.querySelector("CSS選擇器")
+            //let element = window.document.querySelector("div");//永遠抓到body內第一個div，不好用
+            let element = window.document.querySelector("#content");//取得id = content 的element
+            // 2.修改標籤物件的屬性
+            element.innerHTML = "點我後修改的文字內容";
+            element.className = "text";
+            // 使用 window 底下的物件 可省略 window
+            // window.document => document
+            // 3.修改標籤物件的 CSS 樣式
+            element.style.fontWeight = "bold";
+            element.style.display = "none";
+        }
+
+        function show() {
+            let element = window.document.querySelector("#content");//取得id = content 的element
+            element.style.display = "block";
+        }
+
+        function changeImg() {
+            let element = document.querySelector("#img");
+            element.src = "img/dog2.jpg"
+        }
+        function enlarge() {
+
+            let element = document.querySelector("#img");
+            element.style.width = "500px";
+            element.style.opacity="0.25";
+        }
     </script>
 </body>
 
