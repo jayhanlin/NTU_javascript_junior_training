@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array陣列</title>
+</head>
+
+<body>
+    <script>
+        //資料：數字、字串、布林、函式、物件、陣列
+        //建立空白陣列
+        let arr = [];
+        // []; //可用這樣方式宣告
+        let number = parseInt(prompt("請輸入學生數量", ""));
+        for (let i = 0; i < number; i++) {
+            arr[i] = parseInt(prompt("請輸入學生成績", ""));
+        }
+
+
+        let sum = 0;
+        for (let index = 0; index < arr.length; index++) {
+            sum = sum + arr[index];
+        }
+        console.log(sum / arr.length);
+
+
+
+
+
+
+
+
+        // 變數的可用範圍
+        /*
+        1.注意變數宣告的位置
+        2.以變數宣告的位置為準，變數在內層可以使用
+        3.內外層以程式區塊 ( 大括號 ) 為分界
+        */
+        /*
+            x = 3;
+            if (true) {
+                x = 2;
+                console.log(x);
+            }
+            console.log(x);
+        */
+        /*
+            let data = 3;
+            function update() {
+                data++;
+                console.log(data);
+            }
+            update();
+            update();
+            update();
+        */
+    </script>
+</body>
+
+</html>
