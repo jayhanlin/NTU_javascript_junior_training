@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchBox</title>
+    <style>
+        .tab {
+            color: black;
+            font-weight: normal;
+        }
+
+        .tab-current {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Search Box</h3>
+    <div>
+        <span class="tab tab-current" id="page" onclick="change('page');">Page</span>
+        <span class="tab" id="img" onclick="change('img');">Img</span>
+        <span class="tab" id="news" onclick="change('news');">News</span>
+    </div>
+    <div>
+        <input type="text" />
+        <input id="btn" type="button" value="Page Search">
+    </div>
+
+    <script>
+        /*
+        $在javascript內無意義，所以有以下使用方式
+        function $(selector) {
+        return document.querySelector(selector);
+        }
+        let page = $("#page");
+        */
+        function get(selector) {
+            return document.querySelector(selector);
+        }
+
+        // 另一種寫法
+        // 利用同一個function 處理所有 tab
+        let currentTab = querySelector(".tab-current");
+        function change(name) {
+            // 把已經選到的標籤改回 tab
+            currentTab.className = "tab";
+            // 把想的那個標籤設定成當前的 tab-current
+            currentTab = document.querySelector("#"+name);
+            currentTab.className = "tab tab-current";
+            // 改變按鈕文字
+            let btn = document.querySelector("#btn");
+            console.log(currentTab.innerHTML);
+            btn.value = currentTab.innerHTML+" Search";
+        }
+
+
+        /*
+        //利用同一個function 處理所有 tab
+        function change(name) {
+            //先把所有標籤都設定成普通 tab
+            let tabs = document.querySelectorAll(".tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].className = "tab";
+            }
+            // 把想要的那一個設定成當前的 tab-current
+            let currentTab = document.querySelector("#"+name);
+            currentTab.className = "tab tab-current";
+
+            //改變按鈕文字
+            let btn = document.querySelector("#btn");
+            btn.value = currentTab.innerHTML+" Search";
+        }
+        */
+        
+        /*
+        //好一點的方式
+            function change(name) {
+                let page = get("#page");
+                let img = get("#img");
+                let btn = get("#btn");
+                if (name == 'page') {
+                    page.className = "tab tab-current";
+                    img.className = "tab";
+
+                    btn.value = "Page Search";
+                }
+                else {
+                    page.className = "tab";
+                    img.className = "tab tab-current";
+                    btn.value = "Img Search";
+                }
+            }
+       */
+
+        /*
+        //原始方式
+        function changToImg() {
+        let page = get("#page");
+        let img = get("#img");
+        let btn = get("#btn");
+        page.style.fontWeight = "normal";
+        img.style.fontWeight = "bold";
+        btn.value = "Img Search"
+        }
+
+        function changToPage() {
+        let page = get("#page");
+        let img = get("#img");
+        let btn = get("#btn");
+        page.style.fontWeight = "bold";
+        img.style.fontWeight = "normal";
+        btn.value = "Page Search"
+        }
+        */
+    </script>
+</body>
+
+</html>
