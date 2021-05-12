@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling</title>
+</head>
+
+<body>
+    <h3>Scheduling</h3>
+    <div id="timer">3</div>
+    <script>
+       
+        //每隔一段時間 持續執行函式
+        //window.setInterval(函式,毫秒時間);
+        function countdown() {
+            var timer = document.querySelector("#timer");
+            timer.innerHTML = timer.innerHTML - 1;
+            if (timer.innerHTML==0) {
+                timer.innerHTML = "hello";
+                window.clearInterval(num);
+            }
+        }
+        var num = window.setInterval(countdown,1000);
+        
+        //等待一段時間之後執行函式
+        //window.setTimeout(函式,毫秒時間);
+        /*
+        //setTimeout倒數計時
+        function countdown() {
+            console.log("Run");
+            var timer = document.querySelector("#timer");
+            timer.innerHTML = timer.innerHTML - 1;
+            if (timer.innerHTML>0) {
+                window.setTimeout(countdown, 1000);
+            }
+            else{
+               // window.location = "http://www.google.com";
+            }
+        
+        }
+       
+        window.setTimeout(countdown, 1000);
+        //window.setTimeout(countdown(), 3000);//已呼叫函式，故立即顯示
+        //非同步 (Asynchronous)
+        console.log("GOGO");
+        */
+    </script>
+</body>
+
+</html>
