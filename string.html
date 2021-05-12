@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 字串物件</title>
+</head>
+
+<body>
+    <h3>
+        String 字串物件
+    </h3>
+    <input type="text" id="input" value="Hello">
+    <button onclick="check();">Check</button>
+    <script>
+        function check() {
+            var text = document.querySelector("#input").value;
+            if (text.toLowerCase().indexOf("fuck") > -1) {
+                alert("不要說髒話");
+                return;
+            }
+            if (text.length == 0) {
+                alert("不要空白");
+                return;
+            }
+            if (text.indexOf("http") != 0) {
+                alert("網址格式錯誤");
+                return;
+            }
+            console.log("一切正常");
+            //    console.log(text);
+            //    console.log("字串長度",text.length);
+            //    console.log("取得第二個字元",text.charAt(1));
+            //    console.log("全部變大寫",text.toUpperCase());
+            //    console.log("取得ell子字串",text.substring(1,4));
+            //    console.log("搜尋是否包含abc",text.indexOf("abc"));
+            //    console.log("搜尋是否包含llo",text.indexOf("llo"));
+        }
+    </script>
+</body>
+
+</html>
