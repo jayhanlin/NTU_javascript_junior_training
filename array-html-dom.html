@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Advanced</title>
+</head>
+
+<body>
+    <h3>HTML DOM Advanced</h3>
+    <div>請輸入資料</div>
+    <div id="container">
+        <input type="text" class="input" />
+        <input type="text" class="input" />
+        <input type="text" class="input" />
+    </div>
+    <div><button onclick="addMore();">新增更多</button></div>
+    <div><button onclick="ok();">送出</button></div>
+    <script>
+        function ok() {
+            let elements = document.querySelectorAll(".input");
+            for (let i = 0; i < elements.length; i++) {
+               console.log(elements[i].value);
+            }
+        }
+
+        function addMore() {
+            //創造新的 html element
+            //document.createElement("標籤名稱")
+            /*
+            let element = document.createElement("div");
+            element.innerHTML ="Hello";
+            element.className = "test";
+            element.style.color = "red";
+            //標籤物件 (HTML Element)
+            // 標籤物件appendChild(標籤物件)
+            let div = document.querySelector("#container");
+            div.appendChild(element);
+            */
+            let element = document.createElement("input");
+            element.type = "text";
+            element.className = "input";
+            let div = document.querySelector("#container");
+            div.appendChild(element);
+
+        }
+    </script>
+</body>
+
+</html>
