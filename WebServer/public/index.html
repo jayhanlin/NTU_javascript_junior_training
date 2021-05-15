@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <h3>Hello Ajax!</h3>
+    <div>關鍵字
+        <input type="text" id="keyword">
+    </div>
+    <button onclick="getProd()">Get Data</button>
+    <div id="prod">
+
+    </div>
+    <script>
+        function render(data) {
+            let prod = document.querySelector("#prod");
+            for (let i = 0; i < data.length; i++) {
+                let item = document.createElement("div");
+                item.className = "prod";
+                item.innerHTML = data[i].name.bold() + data[i].price;
+                prod.appendChild(item);
+            }
+        }
+        function getProd() {
+            // AJAX : 使用Javascript 程式連線到後端取得資訊
+            /*
+            fetch(連線的網址,連線的額外設定).then(連線完成後的處理)
+            */
+            let keyword = document.querySelector("#keyword").value;
+            let src = "http://localhost:3000/getData?keyword=" + keyword;
+            fetch(src).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                render(data);
+            });
+        }
+    </script>
+</body>
+
+</html>
